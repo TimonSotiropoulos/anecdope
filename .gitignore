@@ -1,0 +1,4 @@
+# GIT IGNORE
+
+npm-debug.log
+node_modules/
