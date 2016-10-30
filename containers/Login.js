@@ -15,11 +15,11 @@ export default class Login extends React.Component {
 
     render() {
         return (
-            <div className={styleArray([Layout.flexRow])}>
+            <div className={styleArray([Layout.flexCol, Layout.flexSecondaryCenter, LoginCont])}>
 
-                <div className={Box}></div>
-                <div className={Box2}></div>
-                <div className={Box}></div>
+                <div className={Logo}></div>
+                <div className={styleArray([FormInput, Layout.smMargin])}></div>
+                <div className={FormInput}></div>
 
             </div>
         );
@@ -27,14 +27,18 @@ export default class Login extends React.Component {
 }
 
 // CSS STYLING
-const Box = css({
-    width: '50px',
-    height: '50px',
+const LoginCont = css({
+    backgroundColor: 'pink'
+});
+
+const Logo = css({
+    width: '150px',
+    height: '150px',
     backgroundColor: 'red'
 });
 
-const Box2 = css({
-    width: '50px',
+const FormInput = css({
+    width: '450px',
     height: '50px',
-    backgroundColor: 'blue'
+    backgroundColor: 'green'
 });

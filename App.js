@@ -30,4 +30,6 @@ const contStyle = css({
     height: '100vh',
     backgroundColor: Colours.mainBG,
     display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center'
 });
