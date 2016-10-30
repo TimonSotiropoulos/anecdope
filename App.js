@@ -1,5 +1,5 @@
 import React from 'react';
-import css from 'next/css'
+import css, {insertRule} from 'next/css';
 
 import { Colours } from './styles/base';
 
@@ -7,6 +7,8 @@ export default class App extends React.Component {
 
     constructor(props) {
         super(props)
+        insertRule(`html, body { margin: 0}`);
+        insertRule(`html, body {background-color:${Colours.mainBG}}`);
     }
 
     componentWillMount() {

@@ -1,8 +1,10 @@
 import React from 'react';
 import css from 'next/css';
 
-import { styleArray } from '../utils/styleArray';
+import { mergeStyles } from '../utils/mergeStyles';
 import { Layout } from '../styles/layout';
+
+import Logo from '../components/Logo';
 
 export default class Login extends React.Component {
 
@@ -11,16 +13,13 @@ export default class Login extends React.Component {
     }
 
     componentWillMount() {
+
     }
 
     render() {
         return (
-            <div className={styleArray([Layout.flexCol, Layout.flexSecondaryCenter, LoginCont])}>
-
-                <div className={Logo}></div>
-                <div className={styleArray([FormInput, Layout.smMargin])}></div>
-                <div className={FormInput}></div>
-
+            <div className={mergeStyles([Layout.flexCol, Layout.flexSecondaryCenter, LoginCont])}>
+                <Logo />
             </div>
         );
     }
@@ -29,12 +28,6 @@ export default class Login extends React.Component {
 // CSS STYLING
 const LoginCont = css({
     backgroundColor: 'pink'
-});
-
-const Logo = css({
-    width: '150px',
-    height: '150px',
-    backgroundColor: 'red'
 });
 
 const FormInput = css({

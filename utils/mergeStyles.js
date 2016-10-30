@@ -1,6 +1,6 @@
 
 
-export const styleArray = (styleArray) => {
+export const mergeStyles = (styleArray) => {
     var className = "";
     var arrayLen = styleArray.length;
     styleArray.forEach((value, index) => {
