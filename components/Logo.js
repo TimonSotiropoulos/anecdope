@@ -22,6 +22,8 @@ export default class Logo extends React.Component {
 
 // Style Impors
 const LogoCont = css({
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
     width: '250px',
     height: '250px',
 });

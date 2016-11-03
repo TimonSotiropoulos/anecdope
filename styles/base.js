@@ -1,8 +1,13 @@
 
 export const Colours = {
-    mainBG: '#750593',
+    mainBG: '#8FAEDB',
     orangeBase: '#F89838',
+    orangeDk: '#E87400',
     blueBase: '#27C2EA',
-    purpleBase: '#90AFD9',
-    greyBase: '#C2D3EB'
+    purpleBase: '#8FAEDB',
+    greyBase: '#C2D3EB',
+    greyBG: '#E0E0E0',
+    textDkGrey: '#5b5b5b',
+    textLtGrey: '#afafaf',
+    black: '#000000',
 }

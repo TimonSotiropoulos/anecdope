@@ -17,9 +17,14 @@ export default class FormInput extends React.Component {
 
     render() {
         const {id, type, value, placeholder, updateInput} = this.props;
+        const style = {
+            // backgroundImage: 'linear-gradient(rgba(255,255,255,0.80),rgba(255,255,255,0.80)), url(static/images/inputBG.png);'
+        }
         return (
-            <input onChange={this._updateInput.bind(null, updateInput, id)}
-            className={mergeStyles([Layout.smMargin, FormInputStyle])}
+            <input
+            style={style}
+            onChange={this._updateInput.bind(null, updateInput, id)}
+            className={mergeStyles([Layout.smMargin, Layout.smPaddingLeft, Layout.smPaddingRight, FormInputStyle])}
             placeholder={placeholder}
             value={value}
             type={type} />
@@ -31,5 +36,18 @@ export default class FormInput extends React.Component {
 const FormInputStyle = css({
     width: '250px',
     height: '40px',
-    backgroundColor: Colours.greyBase,
+    backgroundSize: 'cover',
+    backgroundColor: Colours.greyBG,
+    fontSize: '15px',
+    borderStyle: 'solid',
+    borderWidth: '2px',
+    borderRadius: '2px',
+    fontFamily: 'HelveticaNeue',
+    boxShadow: '5px 5px black',
+    '::-webkit-input-placeholder': {
+        color: Colours.textLtGrey,
+        fontWeight: '400'
+    },
+    color: Colours.textDkGrey,
+    fontWeight: '600'
 });

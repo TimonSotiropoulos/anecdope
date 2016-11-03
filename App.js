@@ -1,7 +1,9 @@
 import React from 'react';
 import css, {insertRule} from 'next/css';
+import Head from 'next/head'
 
 import { Colours } from './styles/base';
+
 
 export default class App extends React.Component {
 
@@ -18,6 +20,10 @@ export default class App extends React.Component {
         const { children }  = this.props;
         return (
             <div className={contStyle}>
+                <Head>
+                    <title>Anecdope</title>
+                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                </Head>
                 {children}
             </div>
         );

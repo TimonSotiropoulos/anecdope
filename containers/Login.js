@@ -6,6 +6,7 @@ import { Layout } from '../styles/layout';
 
 import Logo from '../components/Logo';
 import FormInput from '../components/FormInput';
+import Button from '../components/Button';
 
 export default class Login extends React.Component {
 
@@ -35,6 +36,10 @@ export default class Login extends React.Component {
         this.setState(newState);
     }
 
+    loginUser = () => {
+        console.log("Tappyity Tap Tap");
+    }
+
     _renderFormInputs = (currentState, formInputs, updateInput) => {
         return formInputs.map(({id, type, placeholder}, index) => {
             const currentValue = currentState[id] ? currentState[id] : "";
@@ -44,9 +49,10 @@ export default class Login extends React.Component {
 
     render() {
         return (
-            <div className={mergeStyles([Layout.flexCol, Layout.flexSecondaryCenter, LoginCont])}>
+            <div className={mergeStyles([Layout.flexCol, Layout.flexSecondaryCenter, Layout.xlgMarginTop, LoginCont])}>
                 <Logo />
                 {this._renderFormInputs(this.state, this.formFields, this.updateFormInput)}
+                <Button label="Login" action={this.loginUser} />
             </div>
         );
     }
@@ -54,5 +60,5 @@ export default class Login extends React.Component {
 
 // CSS STYLING
 const LoginCont = css({
-    backgroundColor: 'pink'
+    // backgroundColor: 'pink'
 });
